@@ -26,6 +26,11 @@ export default function MovieDetails(props) {
     }
   };
 
+  function getRating(){
+    const newRating = JSON.parse(localStorage.getItem(`${params.movieID}`))
+    if(newRating) return newRating.value
+  }
+
   function changeRating(newRating){
     setRating(newRating);
     let movieRating = {
@@ -33,12 +38,6 @@ export default function MovieDetails(props) {
       movieId: params.movieID
     }
     localStorage.setItem(`${params.movieID}`, JSON.stringify(movieRating))
-  }
-
-  function getRating(){
-    const newRating = JSON.parse(localStorage.getItem(`${params.movieID}`))
-    console.log(newRating)
-    if(newRating) return newRating.value
   }
 
   function fetchData() {

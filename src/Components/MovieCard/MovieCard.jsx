@@ -18,16 +18,3 @@ export default function MovieCard({movie}) {
     )
 }
     
-
-/*
-
-<div class='flex flex-col'>
-    <img>
-    <h2>
-    <p>
-</div>
-
-
-
-
-*/
